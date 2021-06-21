@@ -1,0 +1,4 @@
+.npm
+.idea/
+*.log
+node_modules
