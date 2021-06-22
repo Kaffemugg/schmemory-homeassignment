@@ -1,29 +1,19 @@
-# Schmemory starter kit
+# Schmemory
+Simple memory game prototype
 
-This starter kit includes Webpack, Babel and SASS to hopefully help with
-reducing the time spent on boilerplate stuff. Please start by running
+# Run game
+`yarn start:all`
 
-```bash
-npm install
-```
+# Further improvments
+Errorhandling!
+Cleanup, destructing
+Implement TypeScript for readability and debugging
+Improve class decoupling ans responsibility
+Implement Backend WebSocket Server for Player interaction over network.
 
-This will get these packages installed. When that's done, you can — at any time — do `npm start` to
-run a development server. If you need to serve static files, place them in the `static` folder.
+Implement some kind of templateengine. PUG?
+Improve visuals, add board, clean menu, playernames, turncounter, animations, instructions, highscores
+Implements somekind of Seed and save.
 
-If you are interested in using a simple server to produce images for your cards, you can start the project with
-`npm run start:all` instead. Have a look below for the API documentation.
 
-## Example image server
 
-This HTTP server will generate square images (either in PNG or SVG format) for a given string and
-size in pixels. It will start on localhost port 3002 by default, and has CORS enabled.
-
-### API
-
-#### GET /png/:identifier/:size
-
-Example: `GET /png/alice/200` will return a PNG image of size 200x200 for the string 'alice'.
-
-#### GET /svg/:identifier/:size
-
-Example: `GET /svg/alice/200` will return a SVG image of size 200x200 for the string 'alice'.

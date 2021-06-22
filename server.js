@@ -3,7 +3,7 @@ const jdenticon = require('jdenticon');
 const cors = require('cors');
 
 const app = express();
-app.use(cors());
+// app.use(cors());
 
 const port = process.env.SERVER_PORT || 3002;
 
