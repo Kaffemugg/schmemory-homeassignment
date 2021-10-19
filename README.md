@@ -12,7 +12,7 @@ Improve class decoupling ans responsibility
 Implement Backend WebSocket Server for Player interaction over network.
 
 Implement some kind of templateengine. PUG?
-Improve visuals, add board, clean menu, playernames, turncounter, animations, instructions, highscores
+Improve visuals, add board, menu, playernames, turncounter, animations, instructions, highscores
 Implements somekind of Seed and save.
 
 

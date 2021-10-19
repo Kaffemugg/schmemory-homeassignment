@@ -1,25 +1,21 @@
 body {
-  background-color: dodgerblue;  
+  box-sizing: border-box;
+  background-color: white;
   z-index: 1;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding:20px;
   h1,p{
     text-align: center;
-    color:white;
+    color:rgb(73, 66, 66);
+  }
+  p{
+    font-family: 'Courier New', Courier, monospace;
   }
 }
 
 #app{
-  max-width: 1280px;
-  margin:auto;  
-  border:6px solid #0069d0;
-  border-radius: 5px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-  background-color: #acd3f9;
-  &.finished{
-    border:6px solid #00d092;
-    pointer-events: none;
-  }
+  max-width: 700px;
+  margin:auto;
 }
 
 #board{
@@ -34,68 +30,60 @@ body {
 }
 
 .card {
-  user-select: none;
-  display: inline-block;
-  z-index: 1;
-  height: 80px;
-  width: 80px;
-  margin:50px;
+
+  width: 100px;
+  height: 100px;
+  transition: transform 0.36s;
   transform-style: preserve-3d;
-  background: white;;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 100ms ease-in-out, transform 200ms ease-in-out;  
-  border:2px solid #0069d0;
-  border-radius: 4px;  
+  transform-origin: center;
+  cursor: pointer;
   position: relative;
-    
-  .card-wrap{
-    pointer-events: none;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    
-            
-    .front{      
-      pointer-events: none;
+  display: inline-block;
+  margin:20px;
+  perspective: 50em;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  border:4px solid gray;
+
+  .face{
       position: absolute;
       width: 100%;
       height: 100%;
-      backface-visibility: hidden;  
-      background-color:#4ca7ff;      
+      text-align: center;
+      font-weight: bold;
+      font-size: 40px;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
-  
-    .back{      
-      pointer-events: none;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;  
+
+  .front{
+      background-color: rgb(224, 224, 224);
+    }
+
+  .back{
+    background-color: white;
       transform: rotateY(180deg);
-      background-color: white;
       img{
-        padding:1px;
         width: 100%;
         height: 100%;
       }
     }
 
-  }  
-  &.open{    
+  &.open{
     pointer-events: none;
     z-index: 99;
-    transform: rotateY(180deg) scale3d(2,2,2) translateZ(-2px);
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+    transform: perspective(300px) scale3d(1.2,1.2,1.2) rotateY(180deg)  translateZ(-2px);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
   }
 
-  &.finished{    
-
-    background-color: grey;
+  &.finished{
     pointer-events: none;
     z-index: 99;
-    transform: rotateY(180deg);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+    transform: rotateY(180deg) rotateZ(-10deg);
+    img{    
+      filter: contrast(0.6);
+      width: 100%;
+      height: 100%;
+    }
   }
 
-
- 
 }

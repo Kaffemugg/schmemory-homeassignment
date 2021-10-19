@@ -10,7 +10,7 @@ class Card{
     }
 
     createCard(){        
-        const template = `<div class="card"><div class="card-wrap"><div class="front"></div><div class="back"><img src="http://localhost:3002/svg/${this.id}/300"/></div></div></div>`;
+        const template = `<div class="card"><div class="face front"></div><div class="face back"><img src="http://localhost:3002/svg/${this.id}/300"/></div></div>`;
         const el = this.getNodes(template);                        
         el.addEventListener('click', (e, card) => this.flipCard(e, this));
         this.element = el;

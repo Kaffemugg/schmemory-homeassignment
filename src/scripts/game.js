@@ -3,7 +3,7 @@ import _status from "./status";
 
 const imageNames = 'ABCDEFGHIJKLMNOP';        
 
-const PAIRS = 8;
+const PAIRS = 4;
 
 class Game {
 
