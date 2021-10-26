@@ -1,5 +1,6 @@
 # Schmemory
-Simple memory game prototype
+Simple memory game prototype. This was an employer assignment with a time constraint. Code needs improvement but worked as base for further discussion.
+
 
 # Run game
 `yarn start:all`
